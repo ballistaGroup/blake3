@@ -24,3 +24,14 @@ An unoptimized translation of the blake3 reference implementation from rust to j
 ```
 
 If what you want are java bindings for the fully optimized blake3, try: https://github.com/sken77/BLAKE3jni
+
+
+### BALLISTA how to build and install in our own local maven repo
+
+To build, from root folder, run
+
+    mvn clean package
+
+To install into your own local maven repo, from root run
+
+    mvn install:install-file -Dfile=target/blake3-<version | 0.1>.jar -DpomFile=pom.xml
